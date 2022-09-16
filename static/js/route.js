@@ -120,7 +120,7 @@ function deleteMember() {
    const xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-         alert("응답" + this.responseText);
+         alert("삭제완료");
       }
    };
    xhttp.open("POST", "delete/enroll");
@@ -138,7 +138,7 @@ function insertMember() {
    const xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-         alert("응답" + this.responseText);
+         alert("생성 완료");
       }
    };
    xhttp.open("POST", "insert/enroll"); //http://ip:port/insert
@@ -172,7 +172,6 @@ function insertMember() {
 }
 
 // ================ CLUB ==========================
-// ================ CLUB ==========================
 
 // SEARCH ONE Club
 function searchClub() {
@@ -180,7 +179,7 @@ function searchClub() {
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
          data = this.responseText;
-         alert("응답");
+         alert("결과 조회 완료");
 
          if (data == "해당 조회 결과가 없습니다.") {
             document.getElementById("searchList").style.display = "none";
@@ -308,6 +307,7 @@ function insertClub() {
    const xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
+         alert("클럽 생성 완료")
       }
    };
    xhttp.open("POST", "insert/enroll"); //http://ip:port/insert

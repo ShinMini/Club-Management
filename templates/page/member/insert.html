@@ -1,0 +1,98 @@
+<!-- @format -->
+
+s<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- AJAX를 활용한 route 설정 script file 분리 -->
+    <script type="text/javascript" defer src="../static/js/route.js"></script>
+    <link rel="stylesheet" href="../static/css/base.css" />
+    <link rel="stylesheet" href="../static/css/input.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+    <script type="text/javascript" defer src="../static/js/navbar.js"></script>
+    <style>
+      #member {
+        color: black;
+        background-color: #e7efc5;
+      }
+    </style>
+  </head>
+
+  <body>
+        <!-- side navigation bar -->
+        <div class="sidenav">
+          <a id="home"> Home </a>
+    
+          <a onclick="myFunction1()" class="dropbtn">Member ▼</a>
+          <div id="myDropdown1" class="dropdown-content">
+            <a id="m-insert" href="http://localhost:5000/member/insert"
+              >회원 등록</a
+            >
+            <a id="m-search" href="http://localhost:5000/member/search"
+              >회원 찾기</a
+            >
+            <a id="m-update" href="http://localhost:5000/member/update"
+              >회원 수정</a
+            >
+            <a id="m-delete" href="http://localhost:5000/member/delete"
+              >회원 삭제</a
+            >
+          </div>
+    
+          <a onclick="myFunction2()" class="dropbtn">Club ▼</a>
+          <div id="myDropdown2" class="dropdown-content">
+            <a id="c-insert" href="http://localhost:5000/club/insert"
+              >클럽 등록</a
+            >
+            <a id="c-search" href="http://localhost:5000/club/search"
+              >클럽 찾기</a
+            >
+            <a id="c-update" href="http://localhost:5000/club/update"
+              >클럽 수정</a
+            >
+            <a id="c-delete" href="http://localhost:5000/club/delete"
+              >클럽 삭제</a
+            >
+          </div>
+        </div>
+
+    <div class="mainContainer">
+      <h1 class="border">멤버 등록</h1>
+
+      <div class="inputContainer">
+
+        <label>아이디</label>
+      <input type="text" id="newMemberId" value="99" /> 
+        <label>이름</label>
+      <input type="text" id="newMemberName" value="철수" /> 
+
+        <label>나이</label>
+      <input type="text" id="newAge" value="23" /> 
+
+        <label>핸드폰</label>
+      <input type="text" id="newPhone" value="010-2323-2841" />
+
+        <label>성별</label>
+      <input type="text" id="newGender" value="M" /> 
+
+        <label>클럽</label>
+      <input type="text" id="newClubName" value="경기도 배드민턴협회" /> 
+
+        <label>티어</label>
+      <input type="text" id="newRating" value="B" /> 
+
+        <label>등록 일</label>
+      <input type="text" id="newEnroll" value="2020-11-24" /> 
+
+      <input type="submit" id="insertBtn" onclick="insertMember()" value="등록 하기"></input>
+
+      </div>
+    </div>
+  </body>
+</html>

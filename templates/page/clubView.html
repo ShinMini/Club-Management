@@ -1,0 +1,84 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Club View</title>
+    <link rel="stylesheet" href="static/css/base.css" />
+    <link rel="stylesheet" href="static/css/memberView.css" />
+
+    <!-- AJAX를 활용한 route 설정 script file 분리 -->
+    <script type="text/javascript" defer src="static/js/route.js"></script>
+
+    <script type="text/javascript" defer src="static/js/navbar.js"></script>
+    <link rel="stylesheet" href="static/css/navbar.css" />
+    <style>
+      #club {
+        color: black;
+        background-color: #e7efc5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- side navigation bar -->
+    <div class="sidenav">
+      <a id="home"> Home </a>
+
+      <a onclick="myFunction1()" class="dropbtn">Member</a>
+      <div id="myDropdown1" class="dropdown-content">
+        <a id="m-insert" href="http://localhost:5000/member/insert"
+          >회원 등록</a
+        >
+        <a id="m-search" href="http://localhost:5000/member/search"
+          >회원 찾기</a
+        >
+        <a id="m-update" href="http://localhost:5000/member/update"
+          >회원 수정</a
+        >
+        <a id="m-delete" href="http://localhost:5000/member/delete"
+          >회원 삭제</a
+        >
+      </div>
+
+      <a onclick="myFunction2()" class="dropbtn">Club</a>
+      <div id="myDropdown2" class="dropdown-content">
+        <a id="c-insert" href="http://localhost:5000/club/insert"
+          >클럽 등록</a
+        >
+        <a id="c-search" href="http://localhost:5000/club/search"
+          >클럽 찾기</a
+        >
+        <a id="c-update" href="http://localhost:5000/club/update"
+          >클럽 수정</a
+        >
+        <a id="c-delete" href="http://localhost:5000/club/delete"
+          >클럽 삭제</a
+        >
+      </div>
+    </div>
+
+    <!-- main Container -->
+    <div class="mainContainer">
+      <h1 class="border">Club Management</h1>
+
+      <section>
+        <button class="insert" onclick="location.href='/club/insert';">
+          클럽 등록
+        </button>
+        <button class="search" onclick="location.href='/club/search';">
+          클럽 찾기
+        </button>
+        <button class="update" onclick="location.href='/club/update';">
+          클럽 수정
+        </button>
+        <button class="delete" onclick="location.href='/club/delete';">
+          클럽 삭제
+        </button>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index.html</title>
+    <link rel="stylesheet" href="static/css/navbar.css" />
+    <link rel="stylesheet" href="static/css/base.css" />
+    <script type="text/javascript" defer src="static/js/navbar.js"></script>
+    <style>
+      #home {
+        color: black;
+        background-color: #e7efc5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- side navigation bar -->
+    <div class="sidenav">
+      <a id="home"> Home </a>
+
+      <a onclick="myFunction1()" class="dropbtn">Member ▼</a>
+      <div id="myDropdown1" class="dropdown-content">
+        <a id="m-insert" href="http://localhost:5000/member/insert"
+          >회원 등록</a
+        >
+        <a id="m-search" href="http://localhost:5000/member/search"
+          >회원 찾기</a
+        >
+        <a id="m-update" href="http://localhost:5000/member/update"
+          >회원 수정</a
+        >
+        <a id="m-delete" href="http://localhost:5000/member/delete"
+          >회원 삭제</a
+        >
+      </div>
+
+      <a onclick="myFunction2()" class="dropbtn">Club ▼</a>
+      <div id="myDropdown2" class="dropdown-content">
+        <a id="c-insert" href="http://localhost:5000/club/insert">클럽 등록</a>
+        <a id="c-search" href="http://localhost:5000/club/search">클럽 찾기</a>
+        <a id="c-update" href="http://localhost:5000/club/update">클럽 수정</a>
+        <a id="c-delete" href="http://localhost:5000/club/delete">클럽 삭제</a>
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <h1 class="border">Main Index</h1>
+      <h2>main index page입니다.</h2>
+
+      <br />
+      <br />
+      <br />
+
+      <h3 class="border">What is Lorem Ipsum?</h3>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum.
+      </p>
+      <br />
+      <hr />
+      <br />
+      <h3 class="border">Where can I get some?</h3>
+
+      <p>
+        There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humour, or
+        randomised words which don't look even slightly believable. If you are
+        going to use a passage of Lorem Ipsum, you need to be sure there isn't
+        anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+        generators on the Internet tend to repeat predefined chunks as
+        necessary, making this the first true generator on the Internet. It uses
+        a dictionary of over 200 Latin words, combined with a handful of model
+        sentence structures, to generate Lorem Ipsum which looks reasonable. The
+        generated Lorem Ipsum is therefore always free from repetition, injected
+        humour, or non-characteristic words etc.
+      </p>
+    </div>
+  </body>
+</html>

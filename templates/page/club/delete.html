@@ -1,0 +1,69 @@
+<!-- @format -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>delete</title>
+    <!-- AJAX를 활용한 route 설정 script file 분리 -->
+    <script type="text/javascript" defer src="../static/js/route.js"></script>
+    <link rel="stylesheet" href="../static/css/input.css?ver=1" />
+    <link rel="stylesheet" href="../static/css/base.css?ver=1" />
+    <link rel="stylesheet" href="../static/css/navbar.css?ver=1" />
+    <script type="text/javascript" defer src="../static/js/navbar.js?ver=1"></script>
+    <style>
+      #club{
+        color: black;
+        background-color: #E7EFC5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- side navigation bar -->
+    <div class="sidenav">
+      <a id="home"> Home </a>
+
+      <a onclick="myFunction1()" class="dropbtn">Member ▼</a>
+      <div id="myDropdown1" class="dropdown-content">
+        <a id="m-insert" href="http://localhost:5000/member/insert"
+          >회원 등록</a
+        >
+        <a id="m-search" href="http://localhost:5000/member/search"
+          >회원 찾기</a
+        >
+        <a id="m-update" href="http://localhost:5000/member/update"
+          >회원 수정</a
+        >
+        <a id="m-delete" href="http://localhost:5000/member/delete"
+          >회원 삭제</a
+        >
+      </div>
+
+      <a onclick="myFunction2()" class="dropbtn">Club ▼</a>
+      <div id="myDropdown2" class="dropdown-content">
+        <a id="c-insert" href="http://localhost:5000/club/insert"
+          >클럽 등록</a
+        >
+        <a id="c-search" href="http://localhost:5000/club/search"
+          >클럽 찾기</a
+        >
+        <a id="c-update" href="http://localhost:5000/club/update"
+          >클럽 수정</a
+        >
+        <a id="c-delete" href="http://localhost:5000/club/delete"
+          >클럽 삭제</a
+        >
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <div class="inputContainer">
+        <h1 class="border">클럽 탈퇴</h1>
+        <label>삭제할 클럽의 id를 선택해주세요 .</label>
+        <input type="text" id="checkclubid" value="123" /><br>
+        <input type="submit" id="delBtn" onclick="deleteClub()" value="삭제 하기"></input>
+      </div>
+    </div>
+  </body>
+</html>

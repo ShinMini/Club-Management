@@ -1,0 +1,88 @@
+<!-- @format -->
+​
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>search</title>
+​
+  <script type="text/javascript" defer src="../static/js/route.js"></script>
+  <link rel="stylesheet" href="../static/css/base.css" />
+  <link rel="stylesheet" href="../static/css/navbar.css" />
+  <link rel="stylesheet" href="../static/css/input.css" />
+  <link rel="stylesheet" href="../static/css/table.css" />
+  <script type="text/javascript" defer src="../static/js/navbar.js"></script>
+  <style>
+    #member {
+      color: black;
+      background-color: #e7efc5;
+    }
+  </style>
+</head>
+​
+<body>
+  <!-- side navigation bar -->
+  <div class="sidenav">
+    <a id="home"> Home </a>
+​
+    <a onclick="myFunction1()" class="dropbtn">Member ▼</a>
+    <div id="myDropdown1" class="dropdown-content">
+      <a id="m-insert" href="http://localhost:5000/member/insert">회원 등록</a>
+      <a id="m-search" href="http://localhost:5000/member/search">회원 찾기</a>
+      <a id="m-update" href="http://localhost:5000/member/update">회원 수정</a>
+      <a id="m-delete" href="http://localhost:5000/member/delete">회원 삭제</a>
+    </div>
+​
+    <a onclick="myFunction2()" class="dropbtn">Club ▼</a>
+    <div id="myDropdown2" class="dropdown-content">
+      <a id="c-insert" href="http://localhost:5000/club/insert">클럽 등록</a>
+      <a id="c-search" href="http://localhost:5000/club/search">클럽 찾기</a>
+      <a id="c-update" href="http://localhost:5000/club/update">클럽 수정</a>
+      <a id="c-delete" href="http://localhost:5000/club/delete">클럽 삭제</a>
+    </div>
+  </div>
+​
+  <div class="mainContainer">
+    <h1 class="border">클럽 조회</h1>
+    <div class="inputContainer">
+      <input type="submit" id="searhAllBtn" onclick="searchAllClub()" value="모든 클럽 조회하기"></input>
+      <div id="searchAllList" style="display: none;">
+        <table id="clubTable">
+          <tr>
+            <th>클럽 아이디</th>
+            <th>클럽 이름</th>
+          </tr>
+        </table>
+      </div>
+​
+      <h3>조회할 클럽의 ID를 입력해주세요.</h3>
+      <label>ID</label>
+      <input type="text" id="searchId" value="123" size="2" />
+​
+      <h3>조회할 클럽 이름을 입력해주세요.</h3>
+      <label>클럽 이름</label>
+      <input type="text" id="searchName" value="화성 배드민턴협회" size="2" />
+      <input type="submit" id="clubSearchBtn" onclick="searchClub()" value="조회하기"></input>
+​
+      <h3 id="noData" style="display: none;"></h3>
+      <div id="searchList" style="display: none;">
+        <table id="clubTable">
+          <tr>
+            <th>클럽 아이디</th>
+            <th>클럽 이름</th>
+          </tr>
+          <tr>
+            <td id="id"></td>
+            <td id="name"></td>
+          </tr>
+        </table>
+      </div>
+​
+    </div>
+  </div>
+</body>
+​
+</html>

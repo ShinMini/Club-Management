@@ -1,0 +1,78 @@
+<!-- @format -->
+​
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>update</title>
+  </head>
+​
+  <!-- AJAX를 활용한 route 설정 script file 분리 -->
+  <script type="text/javascript" defer src="../static/js/route.js"></script>
+  <link rel="stylesheet" href="../static/css/base.css" />
+  <link rel="stylesheet" href="../static/css/input.css" />
+  <link rel="stylesheet" href="../static/css/navbar.css" />
+  <script type="text/javascript" defer src="../static/js/navbar.js"></script>
+  <style>
+    #club{
+      color: black;
+      background-color: #e7efc5;
+    }
+  </style>
+​
+  <body>
+    <!-- side navigation bar -->
+    <div class="sidenav">
+      <a id="home"> Home </a>
+
+      <a onclick="myFunction1()" class="dropbtn">Member ▼</a>
+      <div id="myDropdown1" class="dropdown-content">
+        <a id="m-insert" href="http://localhost:5000/member/insert"
+          >회원 등록</a
+        >
+        <a id="m-search" href="http://localhost:5000/member/search"
+          >회원 찾기</a
+        >
+        <a id="m-update" href="http://localhost:5000/member/update"
+          >회원 수정</a
+        >
+        <a id="m-delete" href="http://localhost:5000/member/delete"
+          >회원 삭제</a
+        >
+      </div>
+
+      <a onclick="myFunction2()" class="dropbtn">Club ▼</a>
+      <div id="myDropdown2" class="dropdown-content">
+        <a id="c-insert" href="http://localhost:5000/club/insert"
+          >클럽 등록</a
+        >
+        <a id="c-search" href="http://localhost:5000/club/search"
+          >클럽 찾기</a
+        >
+        <a id="c-update" href="http://localhost:5000/club/update"
+          >클럽 수정</a
+        >
+        <a id="c-delete" href="http://localhost:5000/club/delete"
+          >클럽 삭제</a
+        >
+      </div>
+    </div>
+
+    <div class="mainContainer">
+      <div class="inputContainer">
+        <h3>클럽 정보 수정</h3>
+        <label>클럽 아이디</label>
+        <input type="text" id="ClubId" value="1" /> <br />
+        <input type="submit" id = "searchBtn" onclick="searchClubId()" value="클럽 정보 확인"></input>
+        
+        <br/>
+        <h3>변경할 정보 입력</h3>
+        <label>클럽 이름</label>
+        <input type="text" id="newClubName" value="목성 배드민턴협회" /><br />
+          <input type="submit" id="insertBtn" onclick="updateClub()" value="클럽 정보 수정"></input>
+        </div>
+    </div>
+  </body>
+</html>

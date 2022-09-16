@@ -109,7 +109,7 @@ function updateMember() {
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
    queryString =
       "&memid=" +
-      document.getElementById("MemberId").value +
+      document.getElementById("searchId").value +
       "&memname=" +
       document.getElementById("newMemberName").value
    xhttp.send(queryString);
@@ -217,17 +217,23 @@ function searchAllClub() {
       if (this.readyState == 4 && this.status == 200) {
          result = this.responseText;
          let data = JSON.parse(result);
+
          let table = document.getElementById("clubTable");
+
          for (let i = 0; i < data.length; i++) {
             temp = JSON.parse(data[i]);
             let tr = document.createElement("tr");
             tr.className = "rows";
+
             let td_id = document.createElement("td");
             td_id.innerHTML = temp.club_id;
+
             let td_name = document.createElement("td");
             td_name.innerHTML = temp.club_name;
+
             tr.appendChild(td_id);
             tr.appendChild(td_name);
+
             table.appendChild(tr);
          }
          document.getElementById("searchAllList").style.display = "block";
@@ -235,7 +241,7 @@ function searchAllClub() {
    }
    xhttp.open("POST", "search/all");
    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   xhttp.send();
+   xhttp.send("all");
 }
 
 

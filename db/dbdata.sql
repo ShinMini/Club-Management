@@ -25,3 +25,22 @@ INSERT INTO member (member_name, age, phone, gender, club_name, rating, enroll)
 VALUES ('유재석', 50, "010-3215-6596", 'M', '전라남도배드민턴협회', 'D', '2012-04-01');
 INSERT INTO member (member_name, age, phone, gender, club_name, rating, enroll)
 VALUES ('노홍철', 42, "010-1574-9635", 'M', '경상북도배드민턴협회', 'S', '2012-04-01');
+
+DROP TABLE IF EXISTS club;
+CREATE TABLE club(
+       club_id    INT AUTO_INCREMENT PRIMARY KEY,
+       club_name  VARCHAR(255) NOT NULL
+       );
+INSERT INTO club (club_name) VALUES ('서울특별시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('부산광역시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('대구광역시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('광주광역시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('대전광역시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('인천광역시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('울산광역시배드민턴협회');
+INSERT INTO club (club_name) VALUES ('경기도배드민턴협회');
+INSERT INTO club (club_name) VALUES ('강원도배드민턴협회');
+INSERT INTO club (club_name) VALUES ('충청북도배드민턴협회');
+INSERT INTO club (club_name) VALUES ('제주특별자치도배드민턴협회');
+INSERT INTO club (club_name) VALUES ('전라남도배드민턴협회');
+INSERT INTO club (club_name) VALUES ('경상북도배드민턴협회');
